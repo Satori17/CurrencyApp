@@ -13,6 +13,9 @@
 		58A144DD26F4EE2B001EF26A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A144DB26F4EE2B001EF26A /* Main.storyboard */; };
 		58A144DF26F4EE2D001EF26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58A144DE26F4EE2D001EF26A /* Assets.xcassets */; };
 		58A144E226F4EE2D001EF26A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A144E026F4EE2D001EF26A /* LaunchScreen.storyboard */; };
+		58A144EC26F51939001EF26A /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A144EB26F51939001EF26A /* CurrencyCell.swift */; };
+		58A144EE26F5194A001EF26A /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A144ED26F5194A001EF26A /* TableVC.swift */; };
+		58A144F026F59607001EF26A /* CurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A144EF26F59607001EF26A /* CurrencyData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		58A144DE26F4EE2D001EF26A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58A144E126F4EE2D001EF26A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58A144E326F4EE2D001EF26A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58A144EB26F51939001EF26A /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		58A144ED26F5194A001EF26A /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
+		58A144EF26F59607001EF26A /* CurrencyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,40 @@
 			children = (
 				58A144D526F4EE2B001EF26A /* AppDelegate.swift */,
 				58A144D726F4EE2B001EF26A /* SceneDelegate.swift */,
-				58A144D926F4EE2B001EF26A /* ViewController.swift */,
-				58A144DB26F4EE2B001EF26A /* Main.storyboard */,
+				58A144F326F5978C001EF26A /* Model */,
+				58A144F426F597A3001EF26A /* View */,
+				58A144F526F597AA001EF26A /* Controller */,
 				58A144DE26F4EE2D001EF26A /* Assets.xcassets */,
 				58A144E026F4EE2D001EF26A /* LaunchScreen.storyboard */,
 				58A144E326F4EE2D001EF26A /* Info.plist */,
 			);
 			path = CurrencyApp;
+			sourceTree = "<group>";
+		};
+		58A144F326F5978C001EF26A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				58A144EB26F51939001EF26A /* CurrencyCell.swift */,
+				58A144EF26F59607001EF26A /* CurrencyData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58A144F426F597A3001EF26A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				58A144DB26F4EE2B001EF26A /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		58A144F526F597AA001EF26A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				58A144D926F4EE2B001EF26A /* ViewController.swift */,
+				58A144ED26F5194A001EF26A /* TableVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58A144EC26F51939001EF26A /* CurrencyCell.swift in Sources */,
 				58A144DA26F4EE2B001EF26A /* ViewController.swift in Sources */,
+				58A144F026F59607001EF26A /* CurrencyData.swift in Sources */,
 				58A144D626F4EE2B001EF26A /* AppDelegate.swift in Sources */,
+				58A144EE26F5194A001EF26A /* TableVC.swift in Sources */,
 				58A144D826F4EE2B001EF26A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
