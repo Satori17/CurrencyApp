@@ -58,14 +58,14 @@ class ViewController: UIViewController {
         fetchData()
         exchangeTableView.refreshControl?.attributedTitle = NSAttributedString(string: self.currentDate())
         
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
             self.exchangeTableView.refreshControl?.endRefreshing()
         }
     }
     
     func currentDate() -> String {
         let dateFormater = DateFormatter()
-        dateFormater.dateFormat = "dd MMMM yyyy, hh:mm"
+        dateFormater.dateFormat = "dd MMMM yyyy, HH:mm"
         dateFormater.locale = .autoupdatingCurrent
         let date = dateFormater.string(from: NSDate() as Date)
         
