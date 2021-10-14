@@ -77,7 +77,6 @@
 		58A144F326F5978C001EF26A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				58A144EB26F51939001EF26A /* CurrencyCell.swift */,
 				58A144EF26F59607001EF26A /* CurrencyData.swift */,
 			);
 			path = Model;
@@ -86,6 +85,7 @@
 		58A144F426F597A3001EF26A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				58A144EB26F51939001EF26A /* CurrencyCell.swift */,
 				58A144DB26F4EE2B001EF26A /* Main.storyboard */,
 			);
 			path = View;
