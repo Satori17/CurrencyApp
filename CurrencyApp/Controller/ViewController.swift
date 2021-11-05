@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         fetchData()
         exchangeTableView.refreshControl?.attributedTitle = NSAttributedString(string: self.currentDate())
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+        DispatchQueue.main.async {
             self.exchangeTableView.refreshControl?.endRefreshing()
         }
     }
