@@ -66,6 +66,7 @@
 				58A144D726F4EE2B001EF26A /* SceneDelegate.swift */,
 				58A144F326F5978C001EF26A /* Model */,
 				58A144F426F597A3001EF26A /* View */,
+				58A144DB26F4EE2B001EF26A /* Main.storyboard */,
 				58A144F526F597AA001EF26A /* Controller */,
 				58A144DE26F4EE2D001EF26A /* Assets.xcassets */,
 				58A144E026F4EE2D001EF26A /* LaunchScreen.storyboard */,
@@ -86,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				58A144EB26F51939001EF26A /* CurrencyCell.swift */,
-				58A144DB26F4EE2B001EF26A /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";

@@ -8,18 +8,18 @@
 import UIKit
 
 struct CurrencyData: Codable {
-    var currencies: [CurrencyModel]!
+    var currencies: [CurrencyModel]?
 }
 
 
 struct CurrencyModel: Codable {
-    var code: String!
-    var quantity: Int!
-    var rateFormated: String!
-    var diff: Double!
-    var diffFormated: String!
-    var name: String!
-    var validFromDate: String!
+    var code: String?
+    var quantity: Int?
+    var rateFormated: String?
+    var diff: Double?
+    var diffFormated: String?
+    var name: String?
+    var validFromDate: String?
 }
 
 
