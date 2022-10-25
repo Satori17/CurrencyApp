@@ -9,13 +9,9 @@ import UIKit
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let currency = currencyData?[0] {
-            if let currencies = currency.currencies {
-                return currencies.count
-            }
+        if let currency = currencyData?[0], let currencies = currency.currencies {
+            return currencies.count
         }
         return 0
     }
@@ -23,35 +19,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CurrencyCell") as! CurrencyCell
         if let data = currencyData?[0] {
-            if let current = data.currencies?[indexPath.row] {
-                cell.currencyLabel.text = current.code
-                cell.quantityLabel.text = "\(current.quantity!)"
-                cell.exchangeLabel.text = current.rateFormated
-                if let difference = current.diff {
-                    if difference > 0 {
-                        cell.rateDifferenceLabel.textColor = .red
-                        cell.rateDifferenceLabel.text = "↑\(current.diffFormated!)"
-                    } else {
-                        cell.rateDifferenceLabel.textColor = .green
-                        cell.rateDifferenceLabel.text = "↓\(current.diffFormated!)"
-                    }
-                }
-                if indexPath.row == 0 {
-                    cell.nameLabel.text = "არაბეთის გს დირჰამი"
-                } else {
-                    cell.nameLabel.text = current.name
-                }
+            if var currentData = data.currencies?[indexPath.row] {
+                currentData.flag = flags[indexPath.row]
+                cell.configure(with: currentData, indexPath: indexPath)
             }
         }
-        
-        let flags = flags[indexPath.row]
-        cell.flagLabel.text = flags
-    
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         120
     }
-    
 }
