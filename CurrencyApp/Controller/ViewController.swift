@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         task.resume()
     }
     
-    func configureRefreshControl () {
+    private func configureRefreshControl () {
         exchangeTableView.refreshControl = UIRefreshControl()
         exchangeTableView.refreshControl?.attributedTitle = NSAttributedString(string: currentDate())
         exchangeTableView.refreshControl?.addTarget(self, action:
@@ -57,16 +57,16 @@ class ViewController: UIViewController {
                                                     for: .valueChanged)
     }
     
-    @objc func handleRefreshControl() {
-        fetchData()
+    @objc private func handleRefreshControl() {
         exchangeTableView.refreshControl?.attributedTitle = NSAttributedString(string: self.currentDate())
-        
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
             self.exchangeTableView.refreshControl?.endRefreshing()
         }
+        fetchData()
     }
     
-    func currentDate() -> String {
+    private func currentDate() -> String {
         let dateFormater = DateFormatter()
         dateFormater.dateFormat = "dd MMMM yyyy, HH:mm"
         dateFormater.locale = .autoupdatingCurrent

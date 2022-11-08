@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5858076C2917AC4500840A2B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5858076B2917AC4500840A2B /* NetworkManager.swift */; };
 		58A144D626F4EE2B001EF26A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A144D526F4EE2B001EF26A /* AppDelegate.swift */; };
 		58A144D826F4EE2B001EF26A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A144D726F4EE2B001EF26A /* SceneDelegate.swift */; };
 		58A144DA26F4EE2B001EF26A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A144D926F4EE2B001EF26A /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5858076B2917AC4500840A2B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		58A144D226F4EE2B001EF26A /* CurrencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A144D526F4EE2B001EF26A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58A144D726F4EE2B001EF26A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		585807662917AAFD00840A2B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				58A144D526F4EE2B001EF26A /* AppDelegate.swift */,
+				58A144D726F4EE2B001EF26A /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		585807672917AB0A00840A2B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5858076A2917ABB000840A2B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5858076B2917AC4500840A2B /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		58A144C926F4EE2B001EF26A = {
 			isa = PBXGroup;
 			children = (
@@ -62,8 +88,9 @@
 		58A144D426F4EE2B001EF26A /* CurrencyApp */ = {
 			isa = PBXGroup;
 			children = (
-				58A144D526F4EE2B001EF26A /* AppDelegate.swift */,
-				58A144D726F4EE2B001EF26A /* SceneDelegate.swift */,
+				585807662917AAFD00840A2B /* App */,
+				585807672917AB0A00840A2B /* Extension */,
+				5858076A2917ABB000840A2B /* Network */,
 				58A144F326F5978C001EF26A /* Model */,
 				58A144F426F597A3001EF26A /* View */,
 				58A144DB26F4EE2B001EF26A /* Main.storyboard */,
@@ -173,6 +200,7 @@
 				58A144EC26F51939001EF26A /* CurrencyCell.swift in Sources */,
 				58A144DA26F4EE2B001EF26A /* ViewController.swift in Sources */,
 				58A144F026F59607001EF26A /* CurrencyData.swift in Sources */,
+				5858076C2917AC4500840A2B /* NetworkManager.swift in Sources */,
 				58A144D626F4EE2B001EF26A /* AppDelegate.swift in Sources */,
 				58A144EE26F5194A001EF26A /* TableVC.swift in Sources */,
 				58A144D826F4EE2B001EF26A /* SceneDelegate.swift in Sources */,
